@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timor IT by rmnty.id - Jasa Service & IT Support Kupang</title>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- FULL EMBEDDED CSS (Murni, Instan, & Ringan untuk Acode) -->
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        body {
+            background-color: #f8fafc;
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Utility Classes */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Promo Banner */
+        #promo-banner {
+            background-color: #facc15;
+            color: #020617;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 100;
+        }
+        #promo-banner button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #7f1d1d;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #020617;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid #1e293b;
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+        .logo-sub {
+            font-size: 11px;
+            color: #facc15;
+            font-weight: 400;
+            display: block;
+            margin-top: -2px;
+        }
+        .logo-icon {
+            background: linear-gradient(135deg, #eab308, #f59e0b);
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+        .nav-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link-active {
+            color: #facc15;
+            border-bottom-color: #facc15;
+        }
+        .btn-jemput-nav {
+            background: linear-gradient(to right, #facc15, #f59e0b);
+            color: #020617;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .btn-jemput-nav:active {
+            transform: scale(0.95);
+        }
+
+        /* Mobile Menu */
+        #menu-btn {
+            display: none;
+            background: #1e293b;
+            border: none;
+            color: #cbd5e1;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #mobile-menu {
+            display: none;
+            background-color: #020617;
+            border-top: 1px solid #1e293b;
+            padding: 15px;
+        }
+        .mobile-nav-link {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .mobile-nav-link:hover {
+            background-color: #1e293b;
+            color: #facc15;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(to bottom, #020617, #1e3a8a, #0f172a);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .badge-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: rgba(30, 58, 138, 0.8);
+            border: 1px solid #1d4ed8;
+            color: #facc15;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .dot-online {
+            width: 8px;
+            height: 8px;
+            background-color: #4ade80;
+            border-radius: 50px;
+            box-shadow: 0 0 8px #4ade80;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .highlight-text {
+            background: linear-gradient(to right, #facc15, #fde047);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-text p {
+            color: #cbd5e1;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #facc15, #f59e0b);
+            color: #020617;
+            font-weight: 800;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        .btn-secondary {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid #334155;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            backdrop-filter: blur(4px);
+        }
+        .btn-primary:active, .btn-secondary:active {
+            transform: scale(0.97);
+        }
+        .hero-card-side {
+            flex: 0.8;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s;
+        }
+        .hero-card-side:hover {
+            transform: translateY(-5px);
+        }
+        .card-status-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+        .status-tag {
+            background-color: rgba(74, 222, 128, 0.2);
+            border: 1px solid #4ade80;
+            color: #4ade80;
+            font-size: 11px;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Section Global Heading */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-heading h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+        .section-heading p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+        .line-bar {
+            width: 60px;
+            height: 4px;
+            background-color: #1e3a8a;
+            margin: 15px auto 0;
+            border-radius: 10px;
+        }
+
+        /* Services Section */
+        #layanan {
+            padding: 80px 0;
+            background-color: white;
+        }
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .service-card {
+            background-color: #f8fafc;
+            border: 1px solid #f1f5f9;
+            padding: 30px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            background-color: white;
+            border-color: #e2e8f0;
+        }
+        .icon-box {
+            background-color: #0f172a;
+            color: #facc15;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-card h3 {
+            font-size: 20px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .tag-card-footer {
+            margin-top: 24px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        /* Products Section */
+        #produk {
+            padding: 80px 0;
+            background-color: #f1f5f9;
+        }
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        }
+        .product-img-placeholder {
+            background-color: #f8fafc;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f1f5f9;
+            color: #94a3b8;
+            position: relative;
+        }
+        .badge-refurbished {
+            position: absolute;
+            bottom: 10px;
+            background-color: #facc15;
+            color: #020617;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        .product-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .product-info h3 {
+            font-size: 14px;
+            color: #1e293b;
+            font-weight: 600;
+            line-height: 1.4;
+            height: 40px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin-bottom: 10px;
+        }
+        .btn-buy {
+            width: 100%;
+            margin-top: auto;
+            background-color: #020617;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .btn-buy:hover {
+            background-color: #1e3a8a;
+        }
+
+        /* Booking Section Form */
+        #jemput {
+            padding: 80px 0;
+            background-color: white;
+        }
+        .form-box {
+            background: linear-gradient(to bottom, #f8fafc, rgba(219, 234, 254, 0.2));
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        .form-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #0f172a, #facc15, #1d4ed8);
+            border-radius: 24px 24px 0 0;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-icon {
+            background-color: #0f172a;
+            color: #facc15;
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            margin: 0 auto 15px;
+        }
+        .form-header h2 {
+            font-size: 26px;
+            color: #0f172a;
+            font-weight: 800;
+        }
+        .form-header p {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #475569;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 14px;
+            background-color: white;
+            transition: all 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #0f172a;
+            box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+        }
+        .cost-container {
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 25px 0;
+        }
+        #estimasiBiaya {
+            font-size: 22px;
+            font-weight: 900;
+            color: #facc15;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #020617;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #020617;
+            color: white;
+            padding: 60px 0 30px;
+            border-top: 1px solid #0f172a;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.9fr 0.9fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #facc15;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border-left: 2px solid #facc15;
+            padding-left: 8px;
+        }
+        .footer-col p {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+        .footer-list {
+            list-style: none;
+        }
+        .footer-list li {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qris-box {
+            background-color: white;
+            color: #020617;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #475569;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .nav-links, .btn-jemput-nav {
+                display: none;
+            }
+            #menu-btn {
+                display: block;
+            }
+            #mobile-menu.active {
+                display: block;
+            }
+            .hero-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-card-side {
+                width: 100%;
+            }
+            .grid-services {
+                grid-template-columns: 1fr;
+            }
+            .grid-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ALERT BANNER INTERAKTIF -->
+    <div id="promo-banner">
+        <span class="flex-center" style="gap:6px;"><i data-lucide="sparkles" style="width:16px;height:16px;"></i> Promo Khusus Minggu Ini: Diskon Biaya Service 10% Bagi Mahasiswa/Pelajar Kupang!</span>
+        <button onclick="document.getElementById('promo-banner').style.display='none';">✕</button>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="cpu" style="width:20px;height:20px;color:#020617;"></i>
+                </div>
+                <div>
+                    <span>TIMOR IT</span>
+                    <span class="logo-sub">by rmnty.id</span>
+                </div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">Beranda</a>
+                <a href="#layanan" class="nav-link">Jasa Service</a>
+                <a href="#produk" class="nav-link">Beli Produk</a>
+                <a href="#jemput" class="nav-link">Layanan Jemput</a>
+            </div>
+
+            <a href="#jemput" class="btn-jemput-nav">
+                <i data-lucide="truck" style="width:16px;height:16px;"></i>
+                <span>Pesan Jemput</span>
+            </a>
+            
+            <button id="menu-btn">
+                <i data-lucide="menu" style="width:24px;height:24px;"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <a href="#hero" class="mobile-nav-link">Beranda</a>
+            <a href="#layanan" class="mobile-nav-link">Jasa Service</a>
+            <a href="#produk" class="mobile-nav-link">Beli Produk</a>
+            <a href="#jemput" class="mobile-nav-link">Layanan Jemput</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <div class="badge-hero">
+                    <span class="dot-online"></span>
+                    <span>IT Support Profesional Kupang</span>
+                </div>
+                <h1>Laptop & Printer Rusak? <br><span class="highlight-text">Kami Jemput</span> ke Rumah Anda!</h1>
+                <p>Layanan kurir jemput barang service di Kota Kupang dan sekitarnya dengan tarif jujur mulai dari Rp25.000 saja. Cepat, amanah, dan ditangani teknisi ahli.</p>
+                <div class="hero-buttons">
+                    <a href="#jemput" class="btn-primary">
+                        <i data-lucide="truck" style="width:18px;height:18px;"></i>
+                        <span>Order Jasa Jemput (Rp25rb)</span>
+                    </a>
+                    <a href="https://wa.me/6285728875494" target="_blank" class="btn-secondary">
+                        <i data-lucide="message-square" style="width:18px;height:18px;color:#4ade80;"></i>
+                        <span>Konsultasi WA (Gratis)</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-card-side">
+                <div class="card-status-header">
+                    <span style="font-weight:700; color:#facc15; display:flex; align-items:center; gap:6px;">
+                        <i data-lucide="shield-check" style="width:18px;height:18px;"></i> Status Teknisi
+                    </span>
+                    <span class="status-tag">Online</span>
+                </div>
+                <p style="color:#cbd5e1; font-style:italic; font-size:13px; line-height:1.6;">
+                    "Kami siap melayani perbaikan Laptop hang/lemot, instalasi OS Windows & Linux, ganti suku cadang keyboard/baterai, printer macet cetak, modifikasi sistem infus, dan instalasi topologi jaringan kantor/kafe."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPESIALISASI LAYANAN JASA SERVICE -->
+    <section id="layanan">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Layanan Jasa Service Kami</h2>
+                <p>Solusi perbaikan hardware dan software bergaransi lokal tepercaya di Kupang</p>
+                <div class="line-bar"></div>
+            </div>
+            
+            <div class="grid-services">
+                <div class="service-card">
+                    <div>
+                        <div class="icon-box"><i data-lucide="laptop" style="width:24px;height:24px;"></i></div>
+                        <h3>Service Laptop / PC</h3>
+                        <p>Instal ulang Windows/Linux, basmi virus, upgrade SSD/RAM, ganti keyboard rusak, LCD pecah, hingga ganti baterai drop.</p>
+                    </div>
+                    <div class="tag-card-footer">Tarif Jujur & Transparan</div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <div class="icon-box"><i data-lucide="printer" style="width:24px;height:24px;"></i></div>
+                        <h3>Service Printer</h3>
+                        <p>Mengatasi printer tidak menarik kertas, hasil cetak bergaris/pudar, error blinking lampu, pasang sistem infus (CISS), hingga reset total counter tinta.</p>
+                    </div>
+                    <div class="tag-card-footer">Garansi Hasil Service</div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <div class="icon-box"><i data-lucide="network" style="width:24px;height:24px;"></i></div>
+                        <h3>IT Support & Jaringan</h3>
+                        <p>Setting Wi-Fi router (MikroTik), penarikan instalasi kabel LAN kantor, pemasangan sistem kasir digital (POS) kafe, serta backup enkripsi data aman.</p>
+                    </div>
+                    <div class="tag-card-footer">Melayani On-Site & Remote</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOKO PRODUK -->
+    <section id="produk">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Komponen & Produk IT</h2>
+                <p>Konsultasikan ketersediaan suku cadang original dengan jaminan kualitas terbaik</p>
+                <div class="line-bar"></div>
+            </div>
+            
+            <div class="grid-products">
+                <!-- PRODUK 1 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">
+                        <i data-lucide="hard-drive" style="width:48px;height:48px;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>SSD SATA III 256GB - V-Gen / Kingston (Solusi Kencang)</h3>
+                        <button onclick="beliProduk('SSD SATA III 256GB')" class="btn-buy">
+                            <i data-lucide="message-square" style="width:14px;height:14px;color:#4ade80;"></i> Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                <!-- PRODUK 2 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">
+                        <i data-lucide="cpu" style="width:48px;height:48px;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>RAM DDR4 SODIMM 8GB (Upgrade Laptop Kantor & Kuliah)</h3>
+                        <button onclick="beliProduk('RAM DDR4 SODIMM 8GB')" class="btn-buy">
+                            <i data-lucide="message-square" style="width:14px;height:14px;color:#4ade80;"></i> Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                <!-- PRODUK 3 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">
+                        <i data-lucide="plug" style="width:48px;height:48px;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Adaptor Charger Original Laptop Asus / Acer / HP 19V Multi</h3>
+                        <button onclick="beliProduk('Charger Original Laptop Multi')" class="btn-buy">
+                            <i data-lucide="message-square" style="width:14px;height:14px;color:#4ade80;"></i> Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                <!-- PRODUK 4 -->
+                <div class="product-card">
+                    <div class="product-img-placeholder">
+                        <i data-lucide="laptop" style="width:44px;height:44px;color:#1e3a8a;"></i>
+                        <span class="badge-refurbished">Refurbished</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Laptop Bekas Siap Pakai Core i5, SSD, Ram 8GB Bergaransi</h3>
+                        <button onclick="beliProduk('Laptop Refurbished Core i5')" class="btn-buy">
+                            <i data-lucide="message-square" style="width:14px;height:14px;color:#4ade80;"></i> Tanya Admin
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM BOOKING LAYANAN JEMPUT BARANG -->
+    <section id="jemput">
+        <div class="container" style="max-width: 650px;">
+            <div class="form-box">
+                <div class="form-header">
+                    <div class="form-icon flex-center">
+                        <i data-lucide="truck" style="width:28px;height:28px;"></i>
+                    </div>
+                    <h2>Form Jasa Jemput Alat</h2>
+                    <p>Tarif kurir otomatis menyesuaikan rute di Kota Kupang & Sekitarnya</p>
+                </div>
+
+                <form id="formService">
+                    <div class="form-group">
+                        <label>Nama Lengkap Pemilik</label>
+                        <input type="text" id="nama" placeholder="Contoh: Bpk. Melki" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nomor WhatsApp Aktif</label>
+                            <input type="tel" id="wa" placeholder="Contoh: 0812xxxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Jenis Perangkat</label>
+                            <select id="jenis" required>
+                                <option value="Laptop">Laptop / Notebook</option>
+                                <option value="Komputer PC">Komputer Desktop (PC)</option>
+                                <option value="Printer">Printer</option>
+                                <option value="Lainnya">Lainnya (Hardware/Jaringan)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Wilayah / Kecamatan di Kupang</label>
+                        <select id="kecamatan" onchange="hitungTarif()" required>
+                            <option value="">-- Pilih Wilayah --</option>
+                            <option value="Oebobo" data-ongkir="25000">Kec. Oebobo (Liliba, Kayu Putih, TDM, dll) - Rp25.000</option>
+                            <option value="Kelapa Lima" data-ongkir="25000">Kec. Kelapa Lima (Oesapa, Lasiana, Baranusa, dll) - Rp25.000</option>
+                            <option value="Kota Raja" data-ongkir="30000">Kec. Kota Raja (Naikoten, Bakunase, Fontein, dll) - Rp30.000</option>
+                            <option value="Alak" data-ongkir="35000">Kec. Alak (Namosain, Tenau, Manutapen, dll) - Rp35.000</option>
+                            <option value="Maulafa" data-ongkir="30000">Kec. Maulafa (Bello, Sikumana, Kolhua, dll) - Rp30.000</option>
+                            <option value="Kupang Tengah" data-ongkir="40000">Kupang Tengah (Tarus, Noelbaki, Penfui Timur, dll) - Rp40.000</option>
+                            <option value="Lainnya" data-ongkir="50000">Wilayah Lainnya / Luar Kota - Hubungi Admin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alamat Lengkap Rumah / Kantor</label>
+                        <textarea id="alamat" rows="2" placeholder="Tuliskan nama jalan, RT/RW, kelurahan, nomor rumah, atau patokan lokasi terdekat" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Keluhan / Kerusakan Perangkat</label>
+                        <textarea id="kendala" rows="2" placeholder="Contoh: Laptop hang lalu layar biru, printer macet eror lampu berkedip." required></textarea>
+                    </div>
+
+                    <div class="cost-container">
+                        <span style="font-size: 14px; font-weight: 600;">Estimasi Biaya Kurir Jemput:</span>
+                        <span id="estimasiBiaya">Rp0</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i data-lucide="message-square" style="width:18px;height:18px;color:#4ade80;"></i>
+                        <span>Kirim Order Jasa via WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px;">
+                    <div class="logo-icon"><i data-lucide="cpu" style="width:20px;height:20px;color:#020617;"></i></div>
+                    <div>
+                        <span>TIMOR IT</span>
+                        <span class="logo-sub">by rmnty.id</span>
+                    </div>
+                </div>
+                <p>Spesialis pemeliharaan perangkat keras komputer, optimasi sistem operasi jaringan internet, serta pengadaan suku cadang aksesoris IT orisinal bergaransi di Kupang.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Area Layanan Kurir</h4>
+                <ul class="footer-list">
+                    <li><i data-lucide="map-pin" style="width:14px;height:14px;color:#facc15;"></i> Kec. Oebobo, Kelapa Lima, Alak</li>
+                    <li><i data-lucide="map-pin" style="width:14px;height:14px;color:#facc15;"></i> Kec. Kota Raja, Maulafa, Kota Lama</li>
+                    <li><i data-lucide="map-pin" style="width:14px;height:14px;color:#facc15;"></i> Tarus, Penfui, & Noelbaki</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Metode Transaksi</h4>
+                <p>Menerima transaksi aman pembayaran tunai cash pasca-service selesai dilakukan atau pembayaran nontunai digital.</p>
+                <div class="qris-box">
+                    <i data-lucide="qr-code" style="width:16px;height:16px;"></i> QRIS READY
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Timor IT by rmnty.id. All rights reserved.</p>
+            <p style="color: #334155;">Kupang Tech Advancement.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // NOMOR ADMIN REVISED
+        const NOMOR_WHATSAPP_ANDA = "6285728875494"; 
+
+        // Inisialisasi Icon Lucide
+        lucide.createIcons();
+
+        // 1. Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // 2. Navbar Scroll Style Adjustment
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 40) {
+                navbar.style.padding = "8px 0";
+                navbar.style.boxShadow = "0 10px 15px -3px rgba(0,0,0,0.3)";
+            } else {
+                navbar.style.padding = "15px 0";
+                navbar.style.boxShadow = "none";
+            }
+            spyNavigation();
+        });
+
+        // 3. Scroll Spy Navigation Highlight
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function spyNavigation() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= (sectionTop - 120)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+        }
+
+        // 4. Hitung Tarif Otomatis
+        function hitungTarif() {
+            const selectKecamatan = document.getElementById('kecamatan');
+            const estimasiBiaya = document.getElementById('estimasiBiaya');
+            const selectedOption = selectKecamatan.options[selectKecamatan.selectedIndex];
+            const ongkir = selectedOption.getAttribute('data-ongkir');
+
+            if (ongkir) {
+                estimasiBiaya.innerText = "Rp" + parseInt(ongkir).toLocaleString('id-ID');
+            } else {
+                estimayaBiaya.innerText = "Rp0";
+            }
+        }
+
+        // 5. Form Service WhatsApp Dispatcher
+        document.getElementById('formService').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const wa = document.getElementById('wa').value;
+            const jenis = document.getElementById('jenis').value;
+            const kecamatan = document.getElementById('kecamatan').value;
+            const alamat = document.getElementById('alamat').value;
+            const kendala = document.getElementById('kendala').value;
+            const ongkir = document.getElementById('estimasiBiaya').innerText;
+
+            const teksPesan = `Halo Timor IT! Saya ingin memesan JASA JEMPUT SERVICE:\n\n` +
+                              `🔧 *Nama Pemilik:* ${nama}\n` +
+                              `📱 *Nomor WA:* ${wa}\n` +
+                              `📦 *Jenis Alat:* ${jenis}\n` +
+                              `📍 *Kecamatan:* ${kecamatan}\n` +
+                              `🏠 *Alamat Lengkap:* ${alamat}\n` +
+                              `⚠️ *Keluhan Alat:* ${kendala}\n\n` +
+                              `🚚 *Estimasi Tarif Kurir Jemput:* *${ongkir}* (Menyesuaikan rute)`;
+
+            const urlWA = `https://api.whatsapp.com/send?phone=${NOMOR_WHATSAPP_ANDA}&text=${encodeURIComponent(teksPesan)}`;
+            window.open(urlWA, '_blank');
+        });
+
+        // 6. E-Commerce WhatsApp Inquiry (No Price Version)
+        function beliProduk(namaProduk) {
+            const teksProduk = `Halo Timor IT! Saya ingin menanyakan ketersediaan stok dan info harga untuk komponen berikut:\n\n` +
+                               `🛒 *Nama Produk:* ${namaProduk}\n\n` +
+                               `Apakah produk ini tersedia saat ini? Terima kasih!`;
+            
+            const urlWA = `https://api.whatsapp.com/send?phone=${NOMOR_WHATSAPP_ANDA}&text=${encodeURIComponent(teksProduk)}`;
+            window.open(urlWA, '_blank');
+        }
+    </script>
+</body>
+</html>
